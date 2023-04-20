@@ -1,14 +1,59 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mi web</title>
 
-  <link href="./css/style.css" rel="stylesheet">
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var elemento = document.querySelectorAll("p");
+            var elemento1 = document.querySelectorAll("h1");
+            var elemento2 = document.querySelectorAll("div");
 
+            for (var index = 0; elemento2.length; index++) {
+                elemento2[index].addEventListener("mouseover",canviar,false);
+                elemento2[index].addEventListener("mouseout",leernormal,false);
+
+            }
+
+            for (var index = 0; elemento1.length; index++) {
+                elemento1[index].addEventListener("mouseover",canviar,false);
+                elemento1[index].addEventListener("mouseout",leernormal,false);
+
+            }
+
+            for (var index = 0; elemento.length; index++) {
+                elemento[index].addEventListener("mouseover",canviar,false);
+                elemento[index].addEventListener("mouseout",leernormal,false);
+            }
+        });
+
+        function canviar(e) {
+            var idSecionado;
+            if (e.target == descripcion || e.target == descripCompleta || e.target == h1){
+                idSecionado = "#descripcion";
+            }else if (e.target == habilidades || e.target == habiliTotales || e.target == h2){
+                idSecionado = "#habilidades";
+            }
+            $(idSecionado).css({"background-color": "#000000", "color" : "#ffffff","box-shadow": "5px 5px 15px gray"});
+        }
+
+        function leernormal(e) {
+            var idSecionado;
+            if (e.target == descripcion || e.target == descripCompleta || e.target == h1){
+                idSecionado = "#descripcion";
+            }else if (e.target == habilidades || e.target == habiliTotales || e.target == h2){
+                idSecionado = "#habilidades";
+            }
+            $(idSecionado).css({"background-color": "#ffffff", "color" : "#000000","box-shadow": ""});
+        }
+    </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <link href="./css/style.css" rel="stylesheet">
 
 </head>
 <body>
@@ -47,51 +92,49 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <div class="row" style="background-color: #0a53be">
-            <div class="col" style="background-color: #0c4128">
-                <p>
-
-
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam est risus, volutpat sit amet velit non, mattis finibus libero. Maecenas eleifend orci quis placerat volutpat. Sed efficitur ante vel enim congue, sit amet molestie orci maximus. Donec tempor tincidunt porttitor. Donec eleifend justo et ultrices congue. Nunc finibus justo vehicula mauris mattis mollis. Aenean pellentesque varius leo, suscipit tempor nulla volutpat eu. Sed molestie, erat nec finibus molestie, massa libero porttitor nulla, tempus consectetur nisi mauris non nulla. Mauris in gravida leo. Fusce feugiat laoreet rutrum. Etiam eu velit aliquet, euismod odio consectetur, pellentesque mi. Nunc vel sagittis purus, in dignissim turpis. Etiam iaculis mi arcu, euismod feugiat ante dictum vel. Cras porta consequat odio id pulvinar.
-
-                    Quisque varius tellus et dui interdum, nec tempus erat porttitor. Morbi vehicula lorem nec libero lacinia, at vehicula lorem pellentesque. Curabitur egestas, mi tempus pharetra maximus, dolor nisi pharetra nibh, a bibendum felis metus sit amet dui. Etiam a sollicitudin erat. Nulla fringilla orci eget ante molestie pulvinar a nec erat. Vestibulum in ultrices felis. Fusce suscipit ornare aliquam.
-
-                    Ut vulputate erat massa, vel lobortis eros tempor id. Nunc lobortis turpis gravida faucibus ultricies. Ut eros purus, dignissim et mauris eget, porttitor vehicula nisl. Integer a nulla ac tortor pellentesque porta. Pellentesque sed magna sit amet nisi dictum aliquet. Quisque feugiat tortor vel est eleifend, et maximus massa rhoncus. In mattis felis vel mauris efficitur, eget vehicula massa scelerisque. Integer porttitor interdum odio. Donec egestas pretium arcu vel faucibus. In facilisis lorem eu nisl posuere, quis volutpat tellus auctor. Suspendisse pharetra pellentesque risus, nec sagittis neque accumsan non. Etiam quis ex sit amet leo pharetra porta. Proin cursus ornare orci ac cursus. Pellentesque sit amet varius sapien, quis tempus erat. Cras tincidunt imperdiet lorem.
-
-                    Nullam quam risus, mollis quis mattis a, vulputate at quam. Ut scelerisque nisi quis arcu tempus, ut blandit risus suscipit. Vivamus ut nulla nec elit fermentum porta. Nunc sit amet erat mattis, porta diam sed, condimentum diam. Sed rutrum euismod ligula, eget aliquet leo vehicula vel. Morbi facilisis malesuada nisl in ullamcorper. Quisque tempus urna massa, ut lacinia nunc tempus nec. Phasellus ac dui blandit, posuere mauris id, molestie leo. Curabitur at ante massa. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis in tempor ante, et rutrum ligula. Duis sit amet sagittis magna. Ut bibendum vel urna in mattis. Suspendisse euismod ex at mollis convallis. Vivamus dapibus malesuada iaculis.
-
-                    Maecenas laoreet elit sit amet sem blandit faucibus sit amet vel elit. Curabitur eget lobortis magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque accumsan ipsum et luctus finibus. In eu nulla quis augue finibus pulvinar. Etiam finibus mauris a orci ultrices, pulvinar facilisis purus viverra. Suspendisse venenatis tortor ac viverra fermentum. Vivamus aliquet mollis elit, vitae tempus dolor semper nec. Phasellus pretium risus in magna suscipit, sit amet rhoncus lorem tristique. Fusce et facilisis diam. Morbi elementum blandit quam sed mollis. Nullam vitae dictum felis. In eget lacinia sem. Pellentesque non interdum libero. Sed egestas dictum ipsum in sagittis. Duis eros eros, pellentesque eu rhoncus ultricies, semper ac arcu.
-
-                    Morbi ut rutrum odio, sed ullamcorper tortor. Morbi sed nulla fermentum, porta enim et, varius tortor. Maecenas luctus justo id erat accumsan, a hendrerit ipsum bibendum. Vestibulum fermentum, leo sit amet maximus facilisis, dui eros ullamcorper ipsum, vel dictum odio enim quis tortor. Etiam mattis ante imperdiet aliquam pellentesque. Fusce mattis pulvinar suscipit. Integer sed leo ac turpis pulvinar dapibus non in arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Ut faucibus mauris sed nulla sagittis fermentum. Aliquam eget turpis ac risus gravida sollicitudin. Nulla facilisi. Morbi feugiat convallis lacinia. Etiam dapibus metus egestas ornare gravida. Vivamus vehicula ante nec tincidunt bibendum.
-
-                    Vivamus diam lacus, euismod at condimentum a, posuere ac tellus. In ut sodales mauris. Pellentesque gravida mattis justo interdum ultricies. Praesent ac lectus dui. Morbi pharetra eu erat in luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis ullamcorper quam, sed suscipit dui. Curabitur id rhoncus ante, nec condimentum risus.
-
-                    Suspendisse sodales nec orci vel aliquam. Sed eu libero eu neque pharetra interdum eu vel nibh. In id est dui. Praesent eget sapien id metus ullamcorper egestas. Etiam laoreet imperdiet nisl ut convallis. Sed efficitur est quis dolor blandit ornare. Aliquam erat quam, tristique egestas molestie in, scelerisque at libero. Vestibulum sollicitudin tristique neque id maximus. Integer porta mi nunc, id vehicula sapien pharetra ut. Nunc ut elementum turpis. Aliquam vitae eleifend tortor. Nunc tempor sapien at enim tempus, finibus vulputate ligula vulputate. Etiam scelerisque egestas urna ut vulputate. Sed aliquet nunc rutrum, lobortis purus eget, aliquet est.
-
-                    Proin scelerisque diam tortor, a condimentum dui malesuada a. Cras sed laoreet nisi, a gravida nunc. Aenean interdum tempor posuere. Morbi cursus mattis augue ut efficitur. Fusce eget velit ligula. Morbi fringilla venenatis tellus, ac interdum ipsum tincidunt sit amet. Donec ligula turpis, ullamcorper ut tempor in, porttitor at tortor. Vivamus ultrices maximus lacus, non finibus dui imperdiet sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut eget metus enim. Proin pellentesque metus hendrerit suscipit tempus. Nullam suscipit tristique augue, vitae pretium felis facilisis eu.
-
-                    Phasellus interdum est vitae neque luctus mattis. Phasellus suscipit suscipit ex nec porttitor. Etiam accumsan tincidunt est quis ultrices. Proin sit amet posuere nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum non mi tincidunt, porta urna at, efficitur eros. Vivamus eget mauris nec nunc cursus sollicitudin. Pellentesque vehicula molestie nibh, et volutpat diam mattis sit amet.
-                    Generados 10 párrafos, 930 palabras, 6321 bytes de Lorem Ipsum
-
-                </p>
+        <div class="row">
+            <div class="col">
+                <div class="row mt-3" id="descripcion">
+                    <h1 class="fw-bold text-lg-center" id="h1">
+                        Descripción
+                    </h1>
+                    <p id="descripCompleta">
+                        Siempre he estado interesado por la informática, me gusta estar actualizándome en cada momento,
+                        soy inquieto con la programación me gusta aprender más y más cada día, no me detengo ante las
+                        adversidades que a mi parecer es cuando más aprendes cuando algo te cuesta conseguirlo, me
+                        gusta la puntualidad, el deporte, y el cine.
+                    </p>
+                </div>
+                <div class="row mt-3" id="habilidades">
+                    <h1 class="text-lg-center fw-bold" id="h2">
+                        Habilidades
+                    </h1>
+                    <p id="habiliTotales">
+                        Siempre he estado interesado por la informática, me gusta estar actualizándome en cada momento,
+                        soy inquieto con la programación me gusta aprender más y más cada día, no me detengo ante las
+                        adversidades que a mi parecer es cuando más aprendes cuando algo te cuesta conseguirlo, me
+                        gusta la puntualidad, el deporte, y el cine.
+                    </p>
+                </div>
+                <div class="row mt-3" id="descarga">
+                    <button type="button" class="btn btn-dark w-50 mx-auto">
+                        <a class="text-light" href="./cv/CV_Raul_Martinez_Castilla.pdf" download="CV_Raul_Martinez_Castilla">
+                            Descargar <br>CV
+                        </a>
+                    </button>
+                </div>
             </div>
             <div class="col" id="colfoto">
-                <a class="img-fluid">
                     <img src="./img/Mi_foto.webp" id="mifoto" alt="Imagen no encontrada">
-                </a>
             </div>
         </div>
     </div>
+    <div class="position-fixed bottom-0 end-0 m-3">
+        <a type="button" href="#" class="btn btn-group-sm rounded-pill position-relative" style="width: 4rem; height:5rem;">
+            <img class="position-absolute top-50 start-50 translate-middle" src="./icon/flecha.png" id="flecha" alt="Icono no encontrado" width="50px" height="50px">
+        </a>
+    </div>
 </main>
-<div class="position-fixed bottom-0 end-0 m-3">
-    <a  href="#">
-        <button type="button" class="btn btn-group-sm rounded-pill" style="width: 4rem; height:5rem;">
-            <img src="./icon/flecha.png" id="flecha" alt="Icono no encontrado" width="50px" height="50px">
-        </button>
-    </a>
-</div>
-
-
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
