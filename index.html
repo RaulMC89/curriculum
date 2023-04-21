@@ -18,13 +18,13 @@
 
             }
 
-            for (var index = 0; elemento1.length; index++) {
+            for (var index1 = 0; elemento1.length; index1++) {
                 elemento1[index].addEventListener("mouseover",canviar,false);
                 elemento1[index].addEventListener("mouseout",leernormal,false);
 
             }
 
-            for (var index = 0; elemento.length; index++) {
+            for (var index2 = 0; elemento.length; index2++) {
                 elemento[index].addEventListener("mouseover",canviar,false);
                 elemento[index].addEventListener("mouseout",leernormal,false);
             }
@@ -32,9 +32,9 @@
 
         function canviar(e) {
             var idSecionado;
-            if (e.target == descripcion || e.target == descripCompleta || e.target == h1){
+            if (e.target === descripcion || e.target === descripCompleta || e.target === h1){
                 idSecionado = "#descripcion";
-            }else if (e.target == habilidades || e.target == habiliTotales || e.target == h2){
+            }else if (e.target === habilidades || e.target === habiliTotales || e.target === h2){
                 idSecionado = "#habilidades";
             }
             $(idSecionado).css({"background-color": "#000000", "color" : "#ffffff","box-shadow": "5px 5px 15px gray"});
@@ -42,9 +42,9 @@
 
         function leernormal(e) {
             var idSecionado;
-            if (e.target == descripcion || e.target == descripCompleta || e.target == h1){
+            if (e.target === descripcion || e.target === descripCompleta || e.target === h1){
                 idSecionado = "#descripcion";
-            }else if (e.target == habilidades || e.target == habiliTotales || e.target == h2){
+            }else if (e.target === habilidades || e.target === habiliTotales || e.target === h2){
                 idSecionado = "#habilidades";
             }
             $(idSecionado).css({"background-color": "#ffffff", "color" : "#000000","box-shadow": ""});
@@ -58,10 +58,10 @@
 </head>
 <body>
 <main class="position-relative">
-    <nav class="navbar navbar-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand " href="#">Raúl Martínez Castilla</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+    <nav class="navbar navbar-dark fixed-top">
+        <div class="container-fluid m-3">
+            <a class="navbar-brand text-dark fs-1 fw-bold" href="#">Raúl Martínez Castilla</a>
+            <button class="navbar-toggler bg-black" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -91,8 +91,11 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid" id="cuerpo">
         <div class="row">
+            <div class="col" id="colfoto">
+                <img src="./img/Mi_foto.webp" id="mifoto" alt="Imagen no encontrada">
+            </div>
             <div class="col">
                 <div class="row mt-3" id="descripcion">
                     <h1 class="fw-bold text-lg-center" id="h1">
@@ -110,10 +113,17 @@
                         Habilidades
                     </h1>
                     <p id="habiliTotales">
-                        Siempre he estado interesado por la informática, me gusta estar actualizándome en cada momento,
-                        soy inquieto con la programación me gusta aprender más y más cada día, no me detengo ante las
-                        adversidades que a mi parecer es cuando más aprendes cuando algo te cuesta conseguirlo, me
-                        gusta la puntualidad, el deporte, y el cine.
+                        A lo lago del grado superior he adquirido todos los conocimientos del leguaje de java, con
+                        destintas dependencias JDBC, mysql y con disgtintos ide´s como netbeans, intellij, eclipse,
+                        visual studio code.<br>
+                        <br>
+                        En referencia a las base de datos he trabajado con base de datos relacionales con sql en con
+                        Mysql workbench 8.0 CE y no relacionales mongodb con linea de comandos, dbeaver, MongoDBcompass
+                        y mediante java como ya mencione antes.<br>
+                        <br>
+                        En leguaje de marcas he trabajado con HTML5, CSS, BOOSTRAP, JQUERY, JAVASCRIP.<br>
+                        <br>
+                        Tengo github en uso y conozco gitlab.
                     </p>
                 </div>
                 <div class="row mt-3" id="descarga">
@@ -124,9 +134,7 @@
                     </button>
                 </div>
             </div>
-            <div class="col" id="colfoto">
-                    <img src="./img/Mi_foto.webp" id="mifoto" alt="Imagen no encontrada">
-            </div>
+
         </div>
     </div>
     <div class="position-fixed bottom-0 end-0 m-3">
